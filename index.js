@@ -21,8 +21,8 @@ const newImage = (imgURL, left, bottom) => {
 //a new image. It's about the same thing.
 const newItem = (imgURL, left, bottom) => {
     let item = newImage(imgURL, left, bottom)
-    // Removes each item upon click
-    item.addEventListener('click', function(){
+    // Removes each item upon (double) click
+    item.addEventListener('dblclick', function(){
         item.remove()
     })
 }

@@ -17,6 +17,16 @@ const newImage = (imgURL, left, bottom) => {
     return image
 }
 
+// Code for creating a new item. Just needed the code from creating
+//a new image. It's about the same thing.
+const newItem = (imgURL, left, bottom) => {
+    let item = newImage(imgURL, left, bottom)
+    // Removes each item upon click
+    item.addEventListener('click', function(){
+        item.remove()
+    })
+}
+
 // Adding the images!
 newImage('assets/green-character.gif', 100, 100) //adds Link!!!
 // Link the Past Link. Been so many years since I played that one. 
@@ -27,13 +37,17 @@ newImage('assets/pillar.png', 350, 100) //adds a pillar
 newImage('assets/crate.png', 150, 200) //adds crate
 newImage('assets/well.png', 500, 425) //adds well
 
+// Adding the items!
+newItem('assets/sword.png', 500, 405) //SWORD
+newItem('assets/shield.png', 165, 185) //SHIELD
+newItem('assets/staff.png', 600, 100) //STAFF
 
 
 
 
 
 // NOT NEEDED CODE
-// BUT IT'S HERE JUST IN CASE
+// BUT IT'S HERE JUST IN CASE I NEED TO LOOK BACK ON SOMETHING
 
 // let greenCharacter = document.createElement('img')
 // greenCharacter.src = 'assets/green-character.gif'
@@ -49,3 +63,20 @@ newImage('assets/well.png', 500, 425) //adds well
 // pineTree.style.left = '450px'
 // pineTree.style.bottom = '200px'
 // document.body.append(pineTree)
+
+// Added the sword for the first time
+// "style" was missing from position, left, and bottom in the 
+// activity code. This is not first time things were missing from
+// given codes. I wonder if that is intentional? To make us pay more attention?
+// If so, it's a good idea. I'd say it working. 
+
+// let sword = document.createElement('img')
+// sword.src = 'assets/sword.png'
+// sword.style.position = 'fixed'
+// sword.style.left = '500px'
+// sword.style.bottom = '405px'
+// document.body.append(sword)
+
+// sword.addEventListener('click', function(){
+//     sword.remove()
+// })
